@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 import { createPost } from '../actions';
+import { Link } from 'react-router-dom';
 
 class PostsNew extends Component {
   onSubmit = (values) => {
@@ -42,13 +43,16 @@ class PostsNew extends Component {
             component="textarea"
             rows="8"
           />
-          <button
-            className="btn btn-primary"
-            type="submit"
-            disabled={this.props.pristine || this.props.submitting}
-          >
-            Create Post
-          </button>
+          <div className="flex-between">
+            <button
+              className="btn btn-primary"
+              type="submit"
+              disabled={this.props.pristine || this.props.submitting}
+            >
+              Create Post
+            </button>
+            <Link to="/" className="btn btn-primary">Back</Link>
+          </div>
         </form>
       </div>
     );

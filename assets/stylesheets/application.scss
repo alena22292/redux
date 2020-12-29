@@ -66,6 +66,10 @@ a:focus {
   border-radius: 0;
   height: 54px;
 }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
 
 input.form-control {
   font-size: 22px;
